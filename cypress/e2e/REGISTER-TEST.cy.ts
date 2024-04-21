@@ -244,7 +244,7 @@ describe("Validates PHONE NUMBER INPUT", () => {
     cy.get('[data-cy="register-button"]').click();
     cy.url().should("include", "/register");
   });
-  it.only("Validates the invalid phone number format.", () => {
+  it("Validates the invalid phone number format.", () => {
     cy.fixture("users/invalidUserInfo.json").then((userData) => {
       for (const user of userData) {
         cy.get('[data-cy="register-phone-number-input"]')
@@ -257,7 +257,7 @@ describe("Validates PHONE NUMBER INPUT", () => {
       }
     });
   });
-  it.only("Validates the invalid phone number length.", () => {
+  it("Validates the invalid phone number length.", () => {
     cy.get('[data-cy="register-phone-number-input"]').clear().type("089785909");
     cy.get('[data-cy="register-button"]').click();
     cy.get('[data-cy="length-register-phone-number-error"]').should("exist");
