@@ -1,0 +1,44 @@
+[
+  {
+    "email": "กฏฆหฏ@gmail.com",
+    "password": "รหัสผ่าน",
+    "dateOfBirth": "12/12/2010",
+    "phoneNumber": "0877347588"
+  },
+  {
+    "email": "@gmail.com",
+    "password": "12345678ก",
+    "dateOfBirth": "12/12/2007",
+    "phoneNumber": "0877347588"
+  },
+  {
+    "email": "123456",
+    "password": "หกหฟ12345678",
+    "dateOfBirth": "12/01/2024",
+    "phoneNumber": "0877347588"
+  },
+  {
+    "email": "testemail.com",
+    "password": "หกหฟ12345678",
+    "dateOfBirth": "11/12/2019",
+    "phoneNumber": "0877347588"
+  },
+  {
+    "email": "test@emailcom",
+    "password": "หกหฟ12345678",
+    "dateOfBirth": "12/01/2016",
+    "phoneNumber": "0877347588"
+  },
+  {
+    "email": "bodin sonsawan",
+    "password": "หกหฟ12345678",
+    "dateOfBirth": "01/12/2015",
+    "phoneNumber": "0877347588"
+  },
+  {
+    "email": "บดินทร์ ",
+    "password": "หกหฟ12345678",
+    "dateOfBirth": "04/12/2010",
+    "phoneNumber": "0877347588"
+  }
+]

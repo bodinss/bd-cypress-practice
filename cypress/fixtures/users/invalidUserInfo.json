@@ -1,0 +1,20 @@
+[
+  {
+    "email": "กฏฆหฏ@gmail.com",
+    "password": "รหัสผ่าน",
+    "dateOfBirth": "12/12/2025",
+    "phoneNumber": "o897859091"
+  },
+  {
+    "email": "@gmail.com",
+    "password": "12345678ก",
+    "dateOfBirth": "01/12/2028",
+    "phoneNumber": "ก897859091"
+  },
+  {
+    "email": "123456",
+    "password": "หกหฟ12345678",
+    "dateOfBirth": "12/01/9999",
+    "phoneNumber": "ฟหกฟหกฟหกฟหก"
+  }
+]

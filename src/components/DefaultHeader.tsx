@@ -155,7 +155,7 @@ const DefaultHeader = () => {
             <button
               data-cy="submit-login"
               type="submit"
-              className="absolute bottom-3 right-16 bg-[#284446] p-3  justify-center w-[65%] hover:bg-[#405a6a]"
+              className="flex ml-24 bg-[#284446] p-3  justify-center w-[65%] hover:bg-[#405a6a]"
             >
               LOGIN
             </button>

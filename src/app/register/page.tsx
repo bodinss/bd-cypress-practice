@@ -84,7 +84,7 @@ const Page = () => {
 
   const validateRegisterPassword = (registerPassword: string) => {
     const trimmedPassword = registerPassword.trim();
-    const validPasswordFormat = /^[a-zA-Z0-9!@#$%^&*]+$/;
+    const validPasswordFormat = /^[a-zA-Z0-9!@#$%^&*()]+$/;
     setIsRegisterPasswordEmpty(false);
     setIsRegisterPasswordFormatError(false);
     setIsRegisterPasswordLengthError(false);
@@ -175,6 +175,17 @@ const Page = () => {
       !isRegisterEmailEmpty &&
       !isRegisterEmailFormatError &&
       !isRegisterEmailLengthError &&
+      !isRegisterEmailEmpty &&
+      !isRegisterEmailFormatError &&
+      !isRegisterEmailLengthError &&
+      !isRegisterPasswordEmpty &&
+      !isRegisterPasswordFormatError &&
+      !isRegisterPasswordLengthError &&
+      !isRegisterPhoneNumberEmpty &&
+      !isRegisterPhoneNumberFormatError &&
+      !isRegisterPhoneNumberLengthError &&
+      !isRegisterDateOfBirthEmpty &&
+      !isRegisterDateOfBirthFormatError &&
       !isCheckBoxTicked
     ) {
       alert(
@@ -185,6 +196,14 @@ const Page = () => {
       !isRegisterEmailEmpty &&
       !isRegisterEmailFormatError &&
       !isRegisterEmailLengthError &&
+      !isRegisterPasswordEmpty &&
+      !isRegisterPasswordFormatError &&
+      !isRegisterPasswordLengthError &&
+      !isRegisterPhoneNumberEmpty &&
+      !isRegisterPhoneNumberFormatError &&
+      !isRegisterPhoneNumberLengthError &&
+      !isRegisterDateOfBirthEmpty &&
+      !isRegisterDateOfBirthFormatError &&
       isCheckBoxTicked
     ) {
       alert("Successfully Registered");
@@ -196,7 +215,10 @@ const Page = () => {
       <DefaultHeader />
       <DefaultSidebar />
       <div className="absolute bg-white h-[80%] w-[50%] rounded-xl top-24 left-1/3 border ">
-        <h1 className="text-[#284446] font-bold flex text-[28px] justify-center mt-5">
+        <h1
+          data-cy="page-title"
+          className="text-[#284446] font-bold flex text-[28px] justify-center mt-5"
+        >
           REGISTER
         </h1>
         <h2 className="text-black font-bold flex text-[20px] justify-center mt-5">
@@ -295,14 +317,17 @@ const Page = () => {
           </div>
 
           <div className="flex flex-row gap-8 ">
-            <label htmlFor="register-date-of-birth" className="text-black">
+            <label
+              htmlFor="register-date-of-birth-input"
+              className="text-black"
+            >
               {" "}
               Date of Birth:
             </label>
             <input
-              data-cy="register-date-of-birth"
+              data-cy="register-date-of-birth-input"
               type="date"
-              id="register-date-of-birth"
+              id="register-date-of-birth-input"
               value={registerDateOfBirth}
               onChange={(event) => setRegisterDateOfBirth(event.target.value)}
               className="border text-[#284446] w-[65%] "
@@ -343,9 +368,9 @@ const Page = () => {
               Phone Number:
             </label>
             <input
-              data-cy="register-phone-number"
+              data-cy="register-phone-number-input"
               type="text"
-              id="register-phone-number"
+              id="register-phone-number-input"
               value={registerPhoneNumber}
               onChange={(event) => setRegisterPhoneNumber(event.target.value)}
               className="border text-[#284446] w-[65%] "
@@ -392,13 +417,15 @@ const Page = () => {
             <b className="text-[#284446]">
               I agree to the{" "}
               <span
-                className="underline  hover:cursor-pointer"
+                data-cy="user-agreement"
+                className="underline hover:cursor-pointer"
                 onClick={handleUserAgreementClicked}
               >
                 User Agreement
               </span>{" "}
               and{" "}
               <span
+                data-cy="privacy-policy"
                 className="underline  hover:cursor-pointer"
                 onClick={handlePrivacyPolicyClicked}
               >
@@ -410,7 +437,7 @@ const Page = () => {
           <button
             data-cy="register-button"
             type="submit"
-            className="absolute  right-[140px] bottom-12  bg-[#284446] w-[57.5%] p-3 justify-center hover:bg-[#405a6a]"
+            className="absolute  right-[21%] bottom-12  bg-[#284446] w-[57.5%] p-3 justify-center hover:bg-[#405a6a]"
           >
             REGISTER
           </button>
@@ -420,7 +447,7 @@ const Page = () => {
               className="absolute bg-white h-[100%] w-[100%] rounded-xl top-0 left-0 border text-[#284446]   "
             >
               <button
-                data-cy="close-login-popup"
+                data-cy="close-button"
                 onClick={handleUserAgreementClicked}
                 className="absolute left-[95%] top-0 text-white bg-[#284446] pr-2 pl-2 pt-1 pb-1 "
               >
@@ -455,11 +482,11 @@ const Page = () => {
 
           {isPrivacyPolicyClicked && (
             <div
-              data-cy="user-agreement-popup"
+              data-cy="privacy-policy-popup"
               className="absolute bg-white h-[100%] w-[100%] rounded-xl top-0 left-0 border text-[#284446]"
             >
               <button
-                data-cy="close-login-popup"
+                data-cy="close-button"
                 onClick={handlePrivacyPolicyClicked}
                 className="absolute left-[95%] top-0 text-white bg-[#284446] pr-2 pl-2 pt-1 pb-1"
               >
