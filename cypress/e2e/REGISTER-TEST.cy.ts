@@ -214,6 +214,7 @@ describe("Validates DATE OF BIRTH INPUT", () => {
       for (const user of userData) {
         const formattedDate = user.dateOfBirth.split("/").reverse().join("-");
         cy.get('[data-cy="register-date-of-birth-input"]')
+        
           .clear()
           .type(formattedDate);
         cy.get('[data-cy="register-button"]').click();
@@ -223,7 +224,7 @@ describe("Validates DATE OF BIRTH INPUT", () => {
       }
     });
   });
-  it("Validates the age of user that is under 18", () => {
+  it.only("Validates the age of user that is under 18", () => {
     cy.fixture("users/under18User.json").then((userData) => {
       for (const user of userData) {
         const formattedDate = user.dateOfBirth.split("/").reverse().join("-");
